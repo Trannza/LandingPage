@@ -16,38 +16,44 @@
     <header>
         <a href="#" class="logo">Marco Martin</a>
         <ul class="navBar">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="quiensoy.html">Quién Soy</a></li>
-            <li><a href="CV.html">CV</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li class="icono"><ion-icon name="apps-outline" style="font-size: 24px;"></ion-icon></li>
+            <li class="menuitem"><a href="index.html">Inicio</a></li>
+            <li class="menuitem"><a href="quiensoy.html">Quién Soy</a></li>
+            <li class="menuitem"><a href="CV.html">CV</a></li>
+            <li class="menuitem"><a href="proyectos.html">Proyectos</a></li>
+            <li class="menuitem"><a href="#">Contacto</a></li>
         </ul>
     </header>
     <div class="contenido">
         <div class="tituloBox contacto">
-            <h2>Contacto</h2>
-            <form action="mailto:marcatranza@gmail.com" method="post">
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required>
+            <form class="formulario"  action="mailto:marcatranza@gmail.com" method="post">
+                <h2>Contacto</h2>
+                <div class="contenedor">
+                    <div class="input-contenedor"></div>
+                    <img class="icon" src="img/iconos/manicon.png" alt="">
+                    <input type="text" id=""  placeholder="Nombre completo" required>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="contenedor">
+                    <div class="input-contenedor"></div>
+                    <img class="icon" src="img/iconos/mailicon.png" alt="">
+                    <input type="mail" id=""  placeholder="email" required>
                 </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="" name="telefono">
+                <div class="contenedor">
+                    <div class="input-contenedor"></div>
+                    <img class="icon" src="img/iconos/telicon.png" alt="">
+                    <input type="tel" id=""  placeholder="Nº Telefono" >
                 </div>
-                <div class="form-group">
-                    <label for="asunto">Asunto</label>
-                    <input type="text" id="" name="asunto" required>
+                <div class="contenedor">
+                    <div class="input-contenedor"></div>
+                    <img class="icon" src="img/iconos/textoicon.png" alt="">
+                    <input type="text" id=""  placeholder="Asunto" required>
                 </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="" name="mensaje" rows="6" required></textarea>
+                <div class="contenedor">
+                    <div class="input-contenedor"></div>
+                    <img class="icon" src="img/iconos/textoicon.png" alt="">
+                    <input type="text" id=""  placeholder="Mensaje" required>
                 </div>
-                <button type="submit">Enviar Mensaje</button>
+                <input type="submit" class="boton"></input>
             </form>
         </div>
         <div class="imgBox">

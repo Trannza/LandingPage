@@ -13,11 +13,12 @@ body{
     /*Añadir foto de fondo*/
     background-image: url(img/fondo3.jpg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
     background-size: 100%;
     /*Esto es para oscurecer un poco la foto podía haber usado darken pero esto quedaba mejor*/
     background-blend-mode: luminosity;
+    flex-wrap: wrap;
 }
 section{
     position: relative;
@@ -148,13 +149,12 @@ transition: 0.5s;
 /*Copyright*/
 .copyright{
     position: fixed;
-    bottom: -4px; /* Ajusta según el tamaño del bloque de redes sociales */
-    left: 820px; /* Ajusta según el diseño */
-    margin-bottom: 20px;
-    padding: 0 100px 30px;
+    bottom: 20px; /* Distancia desde el borde inferior */
+    right: 20px; /* Distancia desde el borde derecho */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 .copyright p{
     color: #fff;
@@ -185,9 +185,10 @@ padding: 10px;
 }
 /*Circulo*/
 .circulo{
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    position: fixed; /* Fija la posición del círculo en relación con la ventana del navegador */
+    top: 20px; /* Distancia desde el borde superior de la ventana del navegador */
+    left: 20px;
+    display: flex;
     background: rgb(137,66,188);
     clip-path: circle(650px at right 800px);
     width: 100%;
@@ -219,63 +220,59 @@ padding: 10px;
     margin-bottom: 5px;
 }
 /* Estilos adicionales para el formulario de contacto */
+.contenedor{
+    box-sizing: border-box;
+    width: 100%;
+    text-align: justify;
+    border: 1;
+    border-radius: 20px;
+}
+.formulario{
+    background:white;
+    border-radius: 20px;
+}
+.icon{
+    width: 35px;
+    height: 35px;
+    
+}
+input[type='text'], input[type='mail'], input[type='tel']{
+    text-align: center;
+    font-size: 24px;
+    width: 80%;
+    padding: 10px;
+    border: none;
+}
+.input-contenedor{
+
+    margin-bottom: 15px;
+    border: 1px solid gray;
+}
+.boton{
+    border:none;
+    width: 100%;
+    font-size: 24px;
+    color: white;
+    background-color: #1a2537;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boton:hover{
+    background-color: cadetblue;
+}
+
 .contacto form {
     max-width: 500px;
     margin: 0 auto;
 }
 
 .contacto h2 {
-    text-align: center;
-    margin-bottom: 30px;
+    color:rgb(137,66,188) !important;
+
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-button[type="submit"] {
-    background-color: rgb(137,66,188);
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-}
-
-button[type="submit"]:hover {
-    background-color: rgb(107, 36, 134);
-}
-label{
-    color: white;
-    font-weight:600 ;
-    padding: 10px;
-    transition: 0.3s;
-    font-size:0.9em ;
-    text-transform: uppercase;
-}
 /*Estilos para proyetos galeria*/
 .contenidos{
     display: grid;
@@ -360,7 +357,6 @@ label{
 .redes{
     color:white;
 }
-
 .contenido .imgBox{
     width: 600px;
     display: flex;
@@ -374,4 +370,48 @@ label{
 }
 .contenido .imgBox img:hover {
     height: 80vh;
+}
+
+/* Parte responsive y icono nav */
+.icono {
+    display: none; /* Ocultar el icono ya que no consigo que funcione */
+}
+
+@media screen and(min-width:576px) {
+    .menuitem {
+        display: block; /* Mostrar el menúitem como elemento de línea */
+    }
+
+   .icono {
+        display: none; /* Ocultar el icono en pantallas más grandes */
+    }
+
+    section>*{
+        width: 25%;
+    }
+    .circulo{
+        width: 50%;
+    }
+    img{
+        width: 25%;
+        height: 50%;
+        
+    }
+    .formulario{
+        margin-top: 150px;
+        width: 200px;
+        margin: auto;
+        border-radius: 2px;
+    }
+}
+@media screen and(min-width:992px) {
+
+    .menuitem {
+        display: block; /* Mostrar el menúitem como bloque */
+    }
+
+    .icono {
+      display: none; /* Ocultar el icono en pantallas más grandes */
+    }
+    
 }
