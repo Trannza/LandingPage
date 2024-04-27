@@ -1,22 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-@media screen and (min-width: 576px) {
-    /* Estilos específicos para tamaños de pantalla de 576px y superiores */
-    /* Por ejemplo: */
-    body {
-        font-size: 16px;
-    }
-}
-
-/* Media query para tamaños de pantalla de 992px y superiores */
-@media screen and (min-width: 992px) {
-    /* Estilos específicos para tamaños de pantalla de 992px y superiores */
-    /* Por ejemplo: */
-    body {
-        max-width: 960px;
-        margin: 0 auto;
-    }
-}
 
 
 *{
@@ -42,7 +24,7 @@ section{
     width: 100;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content:center ;
     align-items: center;
     padding: 100px;
 
@@ -165,9 +147,9 @@ transition: 0.5s;
 }
 /*Copyright*/
 .copyright{
-    position: absolute;
-    bottom: 0px;
-    left: 800px;
+    position: fixed;
+    bottom: -4px; /* Ajusta según el tamaño del bloque de redes sociales */
+    left: 820px; /* Ajusta según el diseño */
     margin-bottom: 20px;
     padding: 0 100px 30px;
     display: flex;
@@ -182,14 +164,13 @@ transition: 0.5s;
 }
 /*Redes sociales*/
 .redesSociales{
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    display:flex ;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 100px 30px;
-    list-style:none;
+    position: fixed;
+    bottom: 20px; /* Distancia desde el borde inferior */
+    right: 20px; /* Distancia desde el borde derecho */
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 .redesSociales li {
 padding: 10px;
@@ -295,4 +276,102 @@ label{
     font-size:0.9em ;
     text-transform: uppercase;
 }
+/*Estilos para proyetos galeria*/
+.contenidos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 0px;
+    width: 800px;
+    }
+.contenidos:after{
+    content: '';
+    display: block;
+    height: 0px;
+    clear: both;
 
+}
+.contenidos div{
+    text-align: center;
+    width: 110%; /* Tamaño fijo para cada box */
+    height: 150%; /* Tamaño fijo para cada box */
+    padding: 1px;
+    margin-top: 80px;
+    border: 0px solid #ccc; /* Añade un borde para visualizar los boxes */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+    box-sizing: border-box;
+    white-space: nowrap;/* Evita que el texto se ajuste al tamaño del box */
+    overflow: hidden;/* Oculta el contenido si es más grande que el tamaño del box */
+    
+ }
+ .contenidos div a:hover{
+    color: white;
+    background: rgb(137,66,188);
+    transition: 0.5s;
+ }
+ .contenidos:hover div{
+    opacity: 0.4;
+    transform: scale(1,1);
+    transition: 1s;
+ }
+ .contenidos:hover div:hover{
+    opacity: 1;
+    transform: scale(1.25);
+ }
+
+ .tituloBoxs {
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido al principio */
+    align-items: center; /* Alinea verticalmente el contenido */
+    width: 100%;
+    margin-left: 10%; /* Ajusta el margen izquierdo para centrar en la parte izquierda */
+}
+.tituloBoxs .contenidos{
+    position: relative;
+    max-width: 600px;
+    text-align: center;
+}
+.tituloBoxs .contenidos a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    color: rgb(137,66,188);
+    background: #fff;
+    padding: 10px 20px;
+    margin:left 30px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.tituloBoxs .contenidos h2{
+    font-size: 2.5em;
+    text-shadow: 2px 2px 2px black;
+    position: absolute;
+    z-index: +12;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+.fotos{
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.redes{
+    color:white;
+}
+
+.contenido .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: -50px;
+    z-index:-5;
+}
+.contenido .imgBox img{
+    height: 80vh;
+}
+.contenido .imgBox img:hover {
+    height: 80vh;
+}
