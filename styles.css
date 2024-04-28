@@ -146,6 +146,9 @@ transition: 0.5s;
 .contenido .imgBox img:hover {
     height: 80vh;
 }
+.radius{
+    border-radius: 100px; 
+}
 /*Copyright*/
 .copyright{
     position: fixed;
